@@ -39,7 +39,7 @@
 
 #mask {
   position: relative;
-  width: 360px;
+  width: 350px;
   height: 520px;
   display: flex;
   justify-self: center;
@@ -57,7 +57,7 @@
   left: 100px;
   background-image: linear-gradient(to bottom, #70da1c, #ccf235);
   box-shadow: 0 0 20px black;
-  animation: animate 4s linear infinite;
+  animation: animate 6s linear infinite;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 }
 
@@ -68,7 +68,7 @@
   inset: 10px;
   background: black;
   background: url(/principal-image.jpg);
-  background-position: -55px -205px;
+  background-position: -3px -35px;
   object-fit: cover;
   border-radius: 5px;
 }
