@@ -1,0 +1,27 @@
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8.75rem;
+
+  margin-top: 80px;
+}
+
+.introImage {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#mask {
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+  width: 360px;
+  height: 520px;
+}
+
+#mask::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 140%;
+  background-color: white;
+}
