@@ -15,7 +15,7 @@ const Header = () => {
         />
       </div>
       <div>
-        <ul>
+        <ul className={style.navButton}>
           <li>
             <a href="">Experiência</a>
           </li>
