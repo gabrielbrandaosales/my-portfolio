@@ -1,7 +1,7 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8.75rem;
+  // gap: 8.75rem;
 
   margin-top: 80px;
   align-items: center;
@@ -42,7 +42,7 @@
   width: 360px;
   height: 520px;
   display: flex;
-  justify-self: end;
+  justify-self: center;
   align-items: center;
   border-radius: 5px;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
