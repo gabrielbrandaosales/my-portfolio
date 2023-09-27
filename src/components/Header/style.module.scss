@@ -2,6 +2,7 @@
   display: flex;
 
   justify-content: space-around;
+  align-items: center;
 
   a {
     color: inherit;
@@ -11,6 +12,11 @@
   li {
     list-style: none;
   }
+}
+
+.header h1 {
+  font-size: 30px;
+  margin: 0;
 }
 
 .navButton {

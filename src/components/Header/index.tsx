@@ -6,13 +6,14 @@ const Header = () => {
   return (
     <nav className={style.header}>
       <div className="logo">
-        <Image
+        {/* <Image
           src="/vercel.svg"
           alt="Vercel Logo"
           width={100}
           height={80}
           priority
-        />
+        /> */}
+        <h1>DEV.</h1>
       </div>
       <div>
         <ul className={style.navButton}>
