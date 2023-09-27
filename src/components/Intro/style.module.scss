@@ -37,6 +37,10 @@
   left: -25px;
 }
 
+.position {
+  padding-right: 10rem;
+}
+
 #mask {
   position: relative;
   width: 350px;
@@ -55,7 +59,11 @@
   width: 120px;
   height: 190%;
   left: 100px;
-  background-image: linear-gradient(to bottom, #70da1c, #ccf235);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(112, 218, 28, 1) 30%,
+    rgba(204, 242, 53, 1) 60%
+  );
   box-shadow: 0 0 20px black;
   animation: animate 6s linear infinite;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);

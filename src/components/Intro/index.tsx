@@ -24,7 +24,7 @@ const Intro = () => {
           height={100}
           priority
         />
-        <h1>Desenvolvedor Full Stack</h1>
+        <h1 className={style.position}>Desenvolvedor Full Stack</h1>
         <p>Localizado em São Paulo 🏖️</p>
       </div>
     </section>
