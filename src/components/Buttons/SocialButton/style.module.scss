@@ -1,0 +1,33 @@
+.container {
+  cursor: pointer;
+  color: var(--color);
+  &:hover {
+    color: var(--hover-color);
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  color: inherit;
+}
+
+// @keyframes barScale {
+//   from {
+//     width: 0;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
+
+@keyframes barScaleRevert {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}

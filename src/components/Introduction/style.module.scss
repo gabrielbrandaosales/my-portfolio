@@ -1,9 +1,10 @@
 .content {
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  // gap: 8.75rem;
-
-  margin-top: 80px;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  padding: 40px 20px;
+  margin: 0 auto;
   align-items: center;
 }
 
@@ -30,16 +31,31 @@
   margin-top: 30px;
 }
 
-.detail {
+.intro::before {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 100px;
+  background: url('/detalhe.svg') no-repeat center;
   position: absolute;
+  top: -15px;
+  left: -40px;
   z-index: -1;
-  top: -10px;
-  left: -25px;
 }
 
-.position {
-  padding-right: 10rem;
+.iconWrapper {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  gap: 24px;
 }
+
+// .detail {
+//   position: absolute;
+//   z-index: -1;
+//   top: -10px;
+//   left: -25px;
+// }
 
 #mask {
   position: relative;
@@ -75,7 +91,7 @@
   position: absolute;
   inset: 10px;
   background: black;
-  background: url(/principal-image.jpg);
+  background: url(/principal-image.jpg) no-repeat;
   background-position: -3px -35px;
   object-fit: cover;
   border-radius: 5px;
