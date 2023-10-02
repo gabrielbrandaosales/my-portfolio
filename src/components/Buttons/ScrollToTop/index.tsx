@@ -1,12 +1,15 @@
-import { useEffect, useState } from 'react';
-import styles from './style.module.scss';
+import { useEffect, useState, useRef } from 'react';
+import { ArrowUp } from 'react-feather';
+import style from './style.module.scss';
 
-const ScrollToTopButton = () => {
+const ScrollToTopButton: React.FC = () => {
+  const scrollToTopRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) setIsVisible(true);
-    else setIsVisible(false);
+    if (scrollToTopRef.current) {
+      setIsVisible(scrollToTopRef.current.getBoundingClientRect().top < 0);
+    }
   };
 
   const scrollToTop = () => {
@@ -26,9 +29,10 @@ const ScrollToTopButton = () => {
 
   return (
     <div
-      className={`${styles.button} scroll-to-top ${isVisible ? 'visible' : ''}`}
+      ref={scrollToTopRef}
+      className={`${style.button} ${isVisible ? 'visible' : ''}`}
       onClick={scrollToTop}>
-      &#9650;
+      <ArrowUp size={24} />
     </div>
   );
 };

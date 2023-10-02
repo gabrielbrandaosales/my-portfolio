@@ -2,9 +2,13 @@
   position: fixed;
   right: 20px;
   top: 800px;
-  padding: 2rem;
+  padding: 1.5rem;
+  background: var(--c6);
   border-radius: 50%;
-  background: #1d1d1d;
-  color: white;
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: var(--c7);
+  }
 }
