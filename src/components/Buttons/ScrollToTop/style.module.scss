@@ -1,0 +1,14 @@
+.button {
+  position: fixed;
+  right: 20px;
+  top: 800px;
+  padding: 1.5rem;
+  background: var(--c6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: var(--c7);
+  }
+}
