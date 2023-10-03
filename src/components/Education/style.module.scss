@@ -1,11 +1,13 @@
 .container {
   display: grid;
+  max-width: 1200px;
   grid-template-columns: 1fr 2fr;
   gap: 100px;
   margin: 0 auto;
   padding: 40px 20px;
   align-items: start;
   background: var(--c13);
+  color: var(--c6);
 }
 
 .title {
@@ -20,12 +22,13 @@
 }
 
 .experience {
-  color: var(--c10, #525252);
+  color: var(--c6, #a3a3a3);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2rem; /* 133.333% */
   margin-bottom: 3.75rem;
+  margin-right: 8.5rem;
 }
 
 .experience span {
