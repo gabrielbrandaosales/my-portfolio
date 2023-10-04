@@ -9,9 +9,9 @@ const Experiencia = () => {
       </span>
       <article>
         <p className={style.experience} aria-label="Experience description">
-          Desenvolvo pequenos projetos como o Bikcraft utilizando apenas{' '}
+          Desenvolvo pequenos projetos como o Meu Portifólio utilizando{' '}
           <span className={style.bold}>HTML</span>,{' '}
-          <span className={style.bold}>CSS</span> e{' '}
+          <span className={style.bold}>SCSS</span> e{' '}
           <span className={style.bold}>JavaScript</span>. Para aplicativos web
           como a rede social Dogs eu trabalhei no UX e UI Design do projeto.
         </p>
@@ -20,12 +20,12 @@ const Experiencia = () => {
           <h2 aria-label="Company">GBM Tech & Control</h2>
           <h2 aria-label="Position">Developer Jr</h2>
           <p className={style.description} aria-label="Position description">
-            Desenvolvo pequenos projetos como o Bikcraft utilizando apenas HTML,
-            CSS e JavaScript. Para aplicativos web como a rede social Dogs.
+            Desenvolvimento backoffice com Next.js, com habilidades em
+            refatoração, otimização e versionamento de código usando Bitbucket
           </p>
           <div className={style.tags} aria-label="technologies">
             <p>HTML</p>
-            <p>CSS</p>
+            <p>SCSS</p>
             <p>JavaScript</p>
             <p>Next</p>
             <p>Node</p>
@@ -36,8 +36,9 @@ const Experiencia = () => {
           <h2 aria-label="Company">BDS Data Solutions</h2>
           <h2 aria-label="Position">Developer</h2>
           <p className={style.description} aria-label="Position description">
-            Desenvolvo pequenos projetos como o Bikcraft utilizando apenas HTML,
-            CSS e JavaScript. Para aplicativos web como a rede social Dogs.
+            Desenvolvimento de API Office com foco em performance e
+            compatibilidade cross-browser em Javascript. Otimização de código,
+            controle de versão com Azure e metodologia ágil (Scrumban).
           </p>
           <div className={style.tags} aria-label="technologies">
             <p>HTML</p>
@@ -45,6 +46,8 @@ const Experiencia = () => {
             <p>JavaScript</p>
             <p>React</p>
             <p>PostgreSQL</p>
+            <p>Azure</p>
+            <p>Scrumban</p>
           </div>
         </div>
       </article>

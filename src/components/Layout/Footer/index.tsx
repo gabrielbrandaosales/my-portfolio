@@ -6,7 +6,7 @@ import { GitHub, Instagram, Linkedin } from 'react-feather';
 
 const Footer = () => {
   return (
-    <footer className={style.container}>
+    <footer className={style.container} id="contact">
       <div className={style.content}>
         <p className={style.footerText}>
           Estou disponível para novos projetos no momento. Entre em contato
