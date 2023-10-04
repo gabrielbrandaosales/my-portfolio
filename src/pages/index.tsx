@@ -6,6 +6,7 @@ import Experience from '@/components/Experience';
 import Footer from '@/components/Layout/Footer';
 import Main from '@/components/Layout/Main';
 import ScrollToTopButton from '@/components/Buttons/ScrollToTop';
+import Education from '@/components/Education';
 
 const inter = Inter({ subsets: ['latin'] });
 const fira = Fira_Sans({
@@ -29,6 +30,7 @@ export default function Home() {
       <Main>
         <Introduction />
         <Experience />
+        <Education />
         <ScrollToTopButton />
       </Main>
       <Footer />

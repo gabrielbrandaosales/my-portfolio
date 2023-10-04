@@ -1,4 +1,7 @@
 .container {
+  background: var(--c13);
+}
+.content {
   display: grid;
   max-width: 1200px;
   grid-template-columns: 1fr 2fr;
@@ -6,10 +9,11 @@
   margin: 0 auto;
   padding: 40px 20px;
   align-items: start;
+  color: var(--c6);
 }
 
 .title {
-  color: var(--c3, #e0e0e0);
+  color: #000;
   font-size: 144px;
   font-style: normal;
   font-weight: 700;
@@ -20,7 +24,7 @@
 }
 
 .experience {
-  color: var(--c10, #525252);
+  color: var(--c6, #a3a3a3);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
