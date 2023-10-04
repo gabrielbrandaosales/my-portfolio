@@ -1,4 +1,7 @@
 .container {
+  background: var(--c13);
+}
+.content {
   display: grid;
   max-width: 1200px;
   grid-template-columns: 1fr 2fr;
@@ -6,7 +9,6 @@
   margin: 0 auto;
   padding: 40px 20px;
   align-items: start;
-  background: var(--c13);
   color: var(--c6);
 }
 
