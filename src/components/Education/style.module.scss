@@ -1,5 +1,6 @@
 .container {
   background: var(--c13);
+  padding: 1.5rem 0;
 }
 .content {
   display: grid;
@@ -10,6 +11,7 @@
   padding: 40px 20px;
   align-items: start;
   color: var(--c6);
+  margin-top: 3rem;
 }
 
 .title {
