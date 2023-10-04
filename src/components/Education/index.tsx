@@ -1,7 +1,11 @@
 import React from 'react';
 import style from './style.module.scss';
 import CardEducation from '../Card/CardEducation';
-
+import CoursesSection from './Sections/CoursesSection';
+var courses: [
+  { name: 'React Completo'; time: '36h' },
+  { name: 'HTML e CSS para iniciantes'; time: '46h' },
+];
 const Education = () => {
   return (
     <section className={style.container} id="experience">
@@ -21,6 +25,12 @@ const Education = () => {
             foundation="USJT"
           />
         </div>
+        <CoursesSection
+          courses={[
+            { name: 'React Completo', time: '36h' },
+            { name: 'HTML e CSS para iniciantes', time: '46h' },
+          ]}
+        />
       </article>
     </section>
   );
