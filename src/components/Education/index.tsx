@@ -3,6 +3,7 @@ import style from './style.module.scss';
 import CardEducation from '../Card/CardEducation';
 import CoursesSection from './Sections/CoursesSection';
 import Languages from './Sections/LanguagesSection';
+import Language from './Sections/LanguagesSection';
 var courses: [
   { name: 'React Completo'; time: '36h' },
   { name: 'HTML e CSS para iniciantes'; time: '46h' },
@@ -38,6 +39,7 @@ const Education = () => {
               { name: 'HTML e CSS para iniciantes', time: '46h' },
             ]}
           />
+          <Language languages={[{ name: 'Inglês', time: 'Técnico' }]} />
         </article>
       </div>
     </section>
