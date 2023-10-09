@@ -30,7 +30,7 @@ export function SocialButton(props: Props) {
         } as CSSProperties
       }>
       <Icon className={styles.icon} size={30} />
-      <div>{text}</div>
+      <div style={{ margin: '6px 0 0 0' }}>{text}</div>
       <div className={styles.bar} />
     </a>
   );

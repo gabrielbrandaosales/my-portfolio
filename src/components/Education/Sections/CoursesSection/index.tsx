@@ -16,7 +16,7 @@ interface Props {
 const CoursesSection: React.FC<Props> = ({ courses }) => {
   return (
     <div className={style.container}>
-      <h1 className={style.title}>Courses & Certificates</h1>
+      <h1 className={style.title}>CURSOS INTENSIVOS</h1>
       {courses.map(({ name, time }) => (
         <div className={style.coursesGroup} key={name}>
           <p className={style.courseName}>{name}</p>
