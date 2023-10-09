@@ -1,0 +1,49 @@
+.title {
+  color: var(--c7, #8f8f8f);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 142.857% */
+
+  margin-bottom: 30px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -30px;
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    background: url('/idiomas.svg') no-repeat center;
+  }
+}
+.languageGroup {
+  display: flex;
+
+  margin-bottom: 1.25rem;
+}
+
+.languageName {
+  color: #fff;
+  font-family: Fira Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 111.111% */
+}
+
+.languageTime {
+  color: var(--c7, #8f8f8f);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 111.111% */
+}
+.separator {
+  color: var(--c7, #8f8f8f);
+  margin: 0 10px;
+}
