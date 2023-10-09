@@ -1,6 +1,11 @@
 .container {
   background: var(--c13);
   padding: 1.5rem 0;
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+  }
 }
 .content {
   display: grid;
@@ -31,7 +36,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 2rem; /* 133.333% */
-  margin-bottom: 3.75rem;
   margin-right: 8.5rem;
 }
 
