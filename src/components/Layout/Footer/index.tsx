@@ -2,11 +2,11 @@ import React from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { SocialButton } from '@/components/Buttons/SocialButton';
-import { GitHub, Instagram, Linkedin } from 'react-feather';
+import { GitHub, Instagram, Linkedin, Mail } from 'react-feather';
 
 const Footer = () => {
   return (
-    <footer className={style.container}>
+    <footer className={style.container} id="contact">
       <div className={style.content}>
         <p className={style.footerText}>
           Estou disponível para novos projetos no momento. Entre em contato
@@ -32,6 +32,13 @@ const Footer = () => {
             target="_blank"
             text="/gabriel.brandao16"
             icon={Instagram}
+            color="#FFF"
+          />
+          <SocialButton
+            href="mailto:gabrielbrandaosales@hotmail.com"
+            target="_blank"
+            text=""
+            icon={Mail}
             color="#FFF"
           />
         </div>

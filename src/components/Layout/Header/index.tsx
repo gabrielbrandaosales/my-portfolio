@@ -11,25 +11,13 @@ const Header = () => {
       <nav>
         <ul className={style.navButton}>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">Experiência</a>
           </li>
           <li>
-            <a
-              href=""
-              onClick={() => {
-                alert('Em construção :)');
-              }}>
-              Education
-            </a>
+            <a href="#education">Formação</a>
           </li>
           <li>
-            <a
-              href=""
-              onClick={() => {
-                alert('Em construção :)');
-              }}>
-              Contact
-            </a>
+            <a href="#contact">Contato</a>
           </li>
         </ul>
       </nav>

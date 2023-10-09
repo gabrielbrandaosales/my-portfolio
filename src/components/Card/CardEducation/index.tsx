@@ -10,8 +10,11 @@ interface props {
 const CardEducation: React.FC<props> = ({ title, name, foundation }) => {
   return (
     <div className={style.card}>
-      <p>{title}</p>
-      <h2>{name}</h2>
+      <div className={style.wrapperContent}>
+        <p>{title}</p>
+        <h2>{name}</h2>
+      </div>
+
       <h3>{foundation}</h3>
     </div>
   );

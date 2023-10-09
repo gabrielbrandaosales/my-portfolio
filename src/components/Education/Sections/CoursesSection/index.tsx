@@ -2,11 +2,11 @@ import React from 'react';
 import style from './style.module.scss';
 export type TimeMeasurementUnit = 'y' | 'm' | 'd' | 'h' | 'min';
 
-// export type Measure = ${number}${TimeMeasurementUnit} | 'auto' | number;
+export type Measure = `${number}${TimeMeasurementUnit}`;
 
 interface Curso {
   name: string;
-  time: string;
+  time: Measure;
 }
 
 interface Props {
