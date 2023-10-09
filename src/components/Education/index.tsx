@@ -2,6 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import CardEducation from '../Card/CardEducation';
 import CoursesSection from './Sections/CoursesSection';
+import Languages from './Sections/LanguagesSection';
 var courses: [
   { name: 'React Completo'; time: '36h' },
   { name: 'HTML e CSS para iniciantes'; time: '46h' },
@@ -20,6 +21,11 @@ const Education = () => {
             mantenho sempre atualizado com cursos intensivos online.
           </p>
           <div className={style.cardGroup}>
+            <CardEducation
+              title="Técnico"
+              name="Desenvolvimento de Sistemas"
+              foundation="ETEC"
+            />
             <CardEducation
               title="Tecnólogo"
               name="Análise e Desenvolvimento de Sistemas"
