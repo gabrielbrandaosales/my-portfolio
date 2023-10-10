@@ -33,6 +33,7 @@ const Education = () => {
           <CoursesSection
             courses={[
               { name: 'React Completo', time: '36h' },
+              { name: 'JavaScript Completo ES6', time: '74h' },
               { name: 'HTML e CSS para iniciantes', time: '46h' },
             ]}
           />
