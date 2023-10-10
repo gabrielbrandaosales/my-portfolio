@@ -1,0 +1,49 @@
+.container {
+  background: var(--c10);
+  padding: 1.5rem 0;
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+  }
+}
+.content {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: start;
+  color: var(--c6);
+  margin-top: 3rem;
+}
+
+.title {
+  color: #000;
+  font-size: 144px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144px;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 330px;
+}
+
+.experience {
+  color: var(--c6, #a3a3a3);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 133.333% */
+  margin-right: 8.5rem;
+}
+
+.experience span {
+  color: var(--c13, #141414);
+  font-weight: 700;
+}
+
+.cardGroup {
+  display: flex;
+}
