@@ -20,7 +20,7 @@
 }
 
 .title {
-  color: #000;
+  color: var(--c13, #141414);
   font-size: 144px;
   font-style: normal;
   font-weight: 700;
@@ -30,7 +30,7 @@
   max-width: 330px;
 }
 
-.experience {
+.subtitle {
   color: var(--c6, #a3a3a3);
   font-size: 1.5rem;
   font-style: normal;
@@ -39,9 +39,14 @@
   margin-right: 8.5rem;
 }
 
-.experience span {
-  color: var(--c13, #141414);
-  font-weight: 700;
+.feedProjects {
+  overflow: auto;
+  max-height: 610px;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .cardGroup {

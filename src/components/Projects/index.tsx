@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
+import CardProject from '../Card/CardProject';
 
 const Projects = () => {
   return (
@@ -8,7 +9,18 @@ const Projects = () => {
         <span>
           <h1 className={style.title}>Projetos</h1>
         </span>
-        <article></article>
+        <article>
+          <p className={style.subtitle}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.{' '}
+          </p>
+          <div className={style.feedProjects}>
+            <CardProject />
+            <CardProject />
+            <CardProject />
+            <CardProject />
+          </div>
+        </article>
       </div>
     </section>
   );
