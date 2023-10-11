@@ -1,0 +1,48 @@
+.Card {
+  position: relative;
+
+  border-radius: 5px;
+  border: 1px solid #000;
+  background: #1d1d1d;
+  padding: 1.25rem;
+  margin: 0 10px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
+    flex-shrink: 0;
+    left: -5px;
+    top: 19px;
+
+    z-index: 3;
+  }
+}
+
+.verticalFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.title {
+  color: #fff;
+  font-family: Fira Sans;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.project {
+  color: var(--c6, #a3a3a3);
+  font-family: Fira Sans;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
