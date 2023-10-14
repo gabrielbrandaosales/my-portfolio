@@ -37,6 +37,10 @@
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
+
+  margin-top: 10px;
+
+  text-transform: capitalize;
 }
 
 .project {
@@ -45,4 +49,19 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
+}
+
+.topic {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0.875rem 1.25rem;
+  border-radius: 8px;
+  background: var(--c8);
+  color: white;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }

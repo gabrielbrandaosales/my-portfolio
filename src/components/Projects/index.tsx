@@ -12,7 +12,9 @@ const Projects = () => {
       .get<Repos[]>('/users/gabrielbrandaosales/repos')
       .then((response) => setRepos(response.data));
   }, []);
-
+  repos
+    .filter((repo) => repo.has_wiki === true)
+    .map((repo) => console.log(repo));
   return (
     <section className={style.container} id="projects">
       <div className={style.content}>
@@ -26,7 +28,10 @@ const Projects = () => {
           </p>
           <div className={style.feedProjects}>
             {repos
-              .filter((repo) => repo.fork == false && repo.homepage)
+              .filter(
+                (repo) =>
+                  repo.fork == false && repo.homepage && repo.has_wiki === true,
+              )
               .map((repo) => (
                 <CardProject data={repo} key={repo.id} />
               ))}

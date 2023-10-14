@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .container {
   background: var(--c10);
   padding: 1.5rem 0;
@@ -47,6 +49,21 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+
+  &::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c10;
+    border-radius: 14px;
+    border: 3px solid var(--primary);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c10);
+  }
 }
 
 .cardGroup {
