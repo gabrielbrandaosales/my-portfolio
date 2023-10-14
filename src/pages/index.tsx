@@ -31,7 +31,7 @@ export default function Home() {
       <Main>
         <Introduction />
         <Experience />
-        {/* <Projects /> */}
+        <Projects />
         <Education />
         <ScrollToTopButton />
       </Main>
