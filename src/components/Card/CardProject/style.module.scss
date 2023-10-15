@@ -19,12 +19,10 @@
     flex-shrink: 0;
     left: -5px;
     top: 19px;
-
-    z-index: 3;
   }
 }
 
-.verticalFlex {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,16 +31,12 @@
 
 .title {
   color: #fff;
-  font-family: Fira Sans;
   font-size: 1.125rem;
-  font-style: normal;
   font-weight: 700;
 }
 
 .project {
   color: var(--c6, #a3a3a3);
-  font-family: Fira Sans;
   font-size: 0.875rem;
-  font-style: normal;
   font-weight: 400;
 }
