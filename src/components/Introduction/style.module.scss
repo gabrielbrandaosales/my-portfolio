@@ -86,14 +86,14 @@
 }
 
 #mask::after {
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
   content: '';
   position: absolute;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
   inset: 10px;
   background: black;
   background: url(/principal-image.jpg) no-repeat;
   background-position: -3px -35px;
-  object-fit: cover;
+  // object-fit: cover;
   border-radius: 5px;
 }
 

@@ -3,14 +3,24 @@ import style from './style.module.scss';
 import { api } from '../../lib/axios';
 import CardProject from '../Card/CardProject';
 import { Repos } from '@/@types/repos';
+import puppeteer from 'puppeteer';
 
 const Projects = () => {
   const [repos, setRepos] = useState<Repos[]>([] as Repos[]);
 
   useEffect(() => {
-    api
-      .get<Repos[]>('/users/gabrielbrandaosales/repos')
-      .then((response) => setRepos(response.data));
+    const getRepos = async () => {
+      const response = await api.get<Repos[]>(
+        '/users/gabrielbrandaosales/repos',
+      );
+
+      const filteredRepos = response.data.filter(
+        (repo) => repo.fork == false && repo.homepage && repo.has_wiki === true,
+      );
+
+      setRepos(filteredRepos);
+    };
+    getRepos();
   }, []);
   return (
     <section className={style.container} id="projects">
@@ -24,14 +34,9 @@ const Projects = () => {
             industry.{' '}
           </p>
           <div className={style.feedProjects}>
-            {repos
-              .filter(
-                (repo) =>
-                  repo.fork == false && repo.homepage && repo.has_wiki === true,
-              )
-              .map((repo) => (
-                <CardProject data={repo} key={repo.id} />
-              ))}
+            {repos.map((repo) => (
+              <CardProject data={repo} key={repo.id} />
+            ))}
           </div>
         </article>
       </div>

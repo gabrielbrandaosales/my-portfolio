@@ -1,14 +1,15 @@
-import React from 'react';
+import { useEffect } from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { Repos } from '@/@types/repos';
+import puppeteer from 'puppeteer';
 
 interface Props {
   data: Repos;
 }
 
 const CardProject: React.FC<Props> = ({ data }) => {
-  console.log(data);
+  console.log(data.url);
 
   return (
     <div className={style.Card}>
@@ -25,14 +26,15 @@ const CardProject: React.FC<Props> = ({ data }) => {
           ))}
         </p>
       </div>
-
-      {/* <Image
-        className={style.image}
-        src="#"
-        width={241}
-        height={150}
-        alt="image"
-      /> */}
+      <a href={data.homepage} target="_blank">
+        <Image
+          className={style.image}
+          src="/screenshot.svg"
+          width={241}
+          height={150}
+          alt="image"
+        />
+      </a>
     </div>
   );
 };

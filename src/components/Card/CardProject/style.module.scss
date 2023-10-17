@@ -1,6 +1,4 @@
 .Card {
-  position: relative;
-
   border-radius: 5px;
   border: 1px solid #000;
   background: #1d1d1d;
@@ -9,17 +7,6 @@
 
   display: flex;
   justify-content: space-between;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 20px;
-    background: linear-gradient(180deg, #b6f829 0%, #67dd0a 100%);
-    flex-shrink: 0;
-    left: -5px;
-    top: 19px;
-  }
 }
 
 .content {
@@ -39,4 +26,22 @@
   color: var(--c6, #a3a3a3);
   font-size: 0.875rem;
   font-weight: 400;
+}
+
+.topic {
+  margin: 0 10px;
+  padding: 0.5rem 1rem;
+
+  border: 1px solid #a3a3a3;
+  border-radius: 4px;
+  &:first-child {
+    /* Estilos para o primeiro elemento aqui */
+    margin-left: 0px;
+  }
+
+  /* Seleciona o último elemento com a classe 'minha-classe' */
+  &:last-child {
+    /* Estilos para o último elemento aqui */
+    margin-right: 0px;
+  }
 }
