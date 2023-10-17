@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import style from './style.module.scss';
-import { api } from '../../lib/axios';
+import { api, apiGitHub } from '../../lib/axios';
 import CardProject from '../Card/CardProject';
 import { Repos } from '@/@types/repos';
 
@@ -9,15 +9,27 @@ const Projects = () => {
 
   useEffect(() => {
     const getRepos = async () => {
-      const response = await api.get<Repos[]>(
+      const response = await apiGitHub.get<Repos[]>(
         '/users/gabrielbrandaosales/repos',
       );
 
       const filteredRepos = response.data.filter(
-        (repo) => repo.fork == false && repo.homepage && repo.has_wiki === true,
+        (repo) =>
+          repo.fork === false && repo.homepage && repo.has_wiki === true,
       );
 
-      setRepos(filteredRepos);
+      const filteredReposWithUrl = await Promise.allSettled(
+        filteredRepos.map(async (repo) => {
+          const screenshot = await api.post(
+            `/screenshot?url=${repo.homepage}&title=${repo.name}`,
+          );
+          return { ...repo, url: screenshot };
+        }),
+      );
+
+      console.log(filteredReposWithUrl);
+
+      setRepos(filteredReposWithUrl);
     };
     getRepos();
   }, []);

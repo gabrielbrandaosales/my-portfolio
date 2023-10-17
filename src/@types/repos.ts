@@ -1,3 +1,5 @@
+import { URL } from './imgur';
+
 export interface Repos {
   id: number;
   node_id: string;
