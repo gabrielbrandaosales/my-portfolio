@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { Repos } from '@/@types/repos';
-import puppeteer from 'puppeteer';
 
 interface Props {
   data: Repos;

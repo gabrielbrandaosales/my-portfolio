@@ -3,7 +3,6 @@ import style from './style.module.scss';
 import { api } from '../../lib/axios';
 import CardProject from '../Card/CardProject';
 import { Repos } from '@/@types/repos';
-import puppeteer from 'puppeteer';
 
 const Projects = () => {
   const [repos, setRepos] = useState<Repos[]>([] as Repos[]);
