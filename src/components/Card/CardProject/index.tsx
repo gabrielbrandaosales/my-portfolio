@@ -8,27 +8,28 @@ interface Props {
 }
 
 const CardProject: React.FC<Props> = ({ data }) => {
-  console.log(data.value);
-
   return (
     <div className={style.Card}>
       <div className={style.content}>
-        <a href={data.homepage} target="_blank">
-          <p className={style.project}>PROJETO</p>
-          <h1 className={style.title}>{data.value.name}</h1>
+        <a href={data.homepage ?? ''} target="_blank">
+          <p className={style.project}>PROJET</p>
+          <h1 className={style.title}>{data.name}</h1>
         </a>
-        <p className={style.time}>
-          {data.value.topics.map((topic, index) => (
+        <p className={style.topicWrapper}>
+          {data.topics.map((topic, index) => (
             <span className={style.topic} key={index}>
               {topic}
             </span>
           ))}
         </p>
       </div>
-      <a href={data.value.homepage} target="_blank">
+      <a
+        href={data.homepage ?? ''}
+        style={{ margin: 'auto 0' }}
+        target="_blank">
         <Image
           className={style.image}
-          src={data.value.url.data}
+          src={data.screenshot ?? ''}
           width={241}
           height={150}
           alt="image"

@@ -20,6 +20,7 @@
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .project {
@@ -29,19 +30,19 @@
 }
 
 .topic {
-  margin: 0 10px;
   padding: 0.5rem 1rem;
 
   border: 1px solid #a3a3a3;
   border-radius: 4px;
-  &:first-child {
-    /* Estilos para o primeiro elemento aqui */
-    margin-left: 0px;
-  }
+}
 
-  /* Seleciona o último elemento com a classe 'minha-classe' */
-  &:last-child {
-    /* Estilos para o último elemento aqui */
-    margin-right: 0px;
-  }
+.image {
+  border-radius: 4px;
+}
+
+.topicWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: left;
 }
