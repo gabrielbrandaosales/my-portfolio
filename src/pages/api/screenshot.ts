@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 const puppeteer = require('puppeteer');
 const axios = require('axios');
-import type { AxiosResponse } from 'axios';
-
-const apiKey = '40717d0c613f34477958bda96c17bb9c7a60b248'; // Substitua com sua própria chave
 
 export default async function handler(
   req: NextApiRequest,
@@ -41,7 +38,7 @@ export default async function handler(
       },
       {
         headers: {
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${process.env.PUPPETEER_API_KEY}`,
         },
       },
     );

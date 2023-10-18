@@ -3,10 +3,9 @@ import style from './style.module.scss';
 import { api, apiGitHub } from '../../lib/axios';
 import CardProject from '../Card/CardProject';
 import { Repos } from '@/@types/repos';
-import { ReposWithURL, ScreenshotResponse } from '@/@types/imgur';
 
 const Projects = () => {
-  const [repos, setRepos] = useState<Repos[]>([] as Repos[]);
+  const [repos, setRepos] = useState<Repos[]>([]);
 
   useEffect(() => {
     const getRepos = async () => {
@@ -16,11 +15,11 @@ const Projects = () => {
 
       const filteredRepos = response.filter(
         (repo) =>
-          repo.fork === false &&
+          !repo.fork &&
           repo.homepage &&
-          repo.has_wiki === true &&
+          repo.has_wiki &&
           repo.visibility === 'public' &&
-          repo.name != 'my-portfolio',
+          repo.name !== 'my-portfolio',
       );
 
       const filteredReposWithUrl = await Promise.all(
@@ -28,14 +27,11 @@ const Projects = () => {
           const { data: urlScreenshot } = await api.post<string>(
             `/screenshot?url=${repo.homepage}&title=${repo.name}`,
           );
-
-          console.log(urlScreenshot);
-
           return { ...repo, screenshot: urlScreenshot };
         }),
       );
 
-      setRepos(filteredReposWithUrl as unknown as Repos[]);
+      setRepos(filteredReposWithUrl);
     };
     getRepos();
   }, []);
