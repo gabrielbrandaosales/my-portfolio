@@ -20,7 +20,7 @@ const Projects = () => {
           repo.homepage &&
           repo.has_wiki === true &&
           repo.visibility === 'public' &&
-          repo.name === 'my-portfolio',
+          repo.name != 'my-portfolio',
       );
 
       const filteredReposWithUrl = await Promise.all(
