@@ -8,11 +8,40 @@ const Projects = () => {
   const [repos, setRepos] = useState<Repos[]>([]);
 
   useEffect(() => {
+    //Função para verificar se a screenshot do repositório já existe no imgur
+    const checkUrlScreenshot = async (url: string, title: string) => {
+      try {
+        const urlScreenshot = await api.get(`/screenshot?title=${title}`);
+
+        if (urlScreenshot.status === 200) {
+          return urlScreenshot.data as string;
+        }
+      } catch (error) {
+        return await postUrlScreenshot(url, title);
+      }
+    };
+
+    //Função para postar a screenshot do repositório no imgur
+    const postUrlScreenshot = async (
+      url: string,
+      title: string,
+    ): Promise<string | null> => {
+      const data = await api.post<string>(
+        `/screenshot?url=${url}&title=${title}`,
+      );
+      if (data.status === 200) {
+        return data.data;
+      }
+      return null;
+    };
+    //Função para requisitar os repositórios do GitHub e adicionar as URLs das screenshots
     const getRepos = async () => {
+      //Requisitando os repositórios do GitHub
       const { data: response } = await apiGitHub.get<Repos[]>(
         '/users/gabrielbrandaosales/repos',
       );
 
+      //Filtrando os repositórios
       const filteredRepos = response.filter(
         (repo) =>
           !repo.fork &&
@@ -22,16 +51,18 @@ const Projects = () => {
           repo.name !== 'my-portfolio',
       );
 
+      //Adicionando a screenshot de cada repositório
       const filteredReposWithUrl = await Promise.all(
         filteredRepos.map(async (repo) => {
-          const { data: urlScreenshot } = await api.post<string>(
-            `/screenshot?url=${repo.homepage}&title=${repo.name}`,
+          const urlScreenshot = await checkUrlScreenshot(
+            repo.homepage as string,
+            repo.name,
           );
           return { ...repo, screenshot: urlScreenshot };
         }),
       );
 
-      setRepos(filteredReposWithUrl);
+      setRepos(filteredReposWithUrl as Repos[]);
     };
     getRepos();
   }, []);
