@@ -12,7 +12,7 @@ const CardProject: React.FC<Props> = ({ data }) => {
     <div className={style.Card}>
       <div className={style.content}>
         <a href={data.homepage ?? ''} target="_blank">
-          <p className={style.project}>PROJET</p>
+          <p className={style.project}>PROJETO</p>
           <h1 className={style.title}>{data.name}</h1>
         </a>
         <p className={style.topicWrapper}>
