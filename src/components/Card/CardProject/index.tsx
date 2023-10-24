@@ -1,25 +1,40 @@
-import React from 'react';
+import { useEffect } from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
+import { Repos } from '@/@types/repos';
 
-const CardProject = () => {
+interface Props {
+  data: Repos;
+}
+
+const CardProject: React.FC<Props> = ({ data }) => {
   return (
     <div className={style.Card}>
-      <div className={style.verticalFlex}>
-        <div>
-          <p className={style.project}>PROJETO</p>
-          <h1 className={style.title}>name</h1>
-        </div>
-        <p className={style.time}>time</p>
+      <div className={style.content}>
+        <a href={data.homepage ?? ''} target="_blank">
+          <p className={style.project}>PROJET</p>
+          <h1 className={style.title}>{data.name}</h1>
+        </a>
+        <p className={style.topicWrapper}>
+          {data.topics.map((topic, index) => (
+            <span className={style.topic} key={index}>
+              {topic}
+            </span>
+          ))}
+        </p>
       </div>
-
-      <Image
-        className={style.image}
-        src="blob:https://vercel.com/cd7f074c-b885-4819-994a-d1fe670ff3fc"
-        width={241}
-        height={150}
-        alt="image"
-      />
+      <a
+        href={data.homepage ?? ''}
+        style={{ margin: 'auto 0' }}
+        target="_blank">
+        <Image
+          className={style.image}
+          src={data.screenshot ?? ''}
+          width={241}
+          height={150}
+          alt="image"
+        />
+      </a>
     </div>
   );
 };
