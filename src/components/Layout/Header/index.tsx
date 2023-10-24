@@ -14,6 +14,9 @@ const Header = () => {
             <a href="#experience">Experiência</a>
           </li>
           <li>
+            <a href="#projects">Projetos</a>
+          </li>
+          <li>
             <a href="#education">Formação</a>
           </li>
           <li>
