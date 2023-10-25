@@ -1,10 +1,28 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './style.module.scss';
 
 const Header = () => {
+  const [scrollFixo, setScrollFixo] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY >= 10) {
+        setScrollFixo(true);
+      } else {
+        setScrollFixo(false);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={style.header}>
+    <header className={scrollFixo ? style.scroll : style.header}>
       <span className={style.logo}>
         <a href="#">Dev.</a>
       </span>
