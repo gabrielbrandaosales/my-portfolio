@@ -46,4 +46,6 @@
 
 .cardGroup {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0;
 }
