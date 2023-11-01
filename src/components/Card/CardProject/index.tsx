@@ -23,18 +23,20 @@ const CardProject: React.FC<Props> = ({ data }) => {
           ))}
         </p>
       </div>
-      <a
-        href={data.homepage ?? ''}
-        style={{ margin: 'auto 0' }}
-        target="_blank">
-        <Image
-          className={style.image}
-          src={data.screenshot ?? ''}
-          width={241}
-          height={150}
-          alt="image"
-        />
-      </a>
+      {data.screenshot && (
+        <a
+          href={data.homepage ?? ''}
+          style={{ margin: 'auto 0' }}
+          target="_blank">
+          <Image
+            className={style.image}
+            src={data.screenshot ?? ''}
+            width={241}
+            height={150}
+            alt="image"
+          />
+        </a>
+      )}
     </div>
   );
 };
