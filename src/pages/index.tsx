@@ -19,7 +19,7 @@ const fira = Fira_Sans({
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Gabriel Brandão</title>
         <meta name="description" content="Desenvolvedor Fullstack Javascript" />
@@ -36,6 +36,6 @@ export default function Home() {
         <ScrollToTopButton />
       </Main>
       <Footer />
-    </div>
+    </>
   );
 }

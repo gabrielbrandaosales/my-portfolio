@@ -3,9 +3,11 @@ import style from './style.module.scss';
 import { api, apiGitHub } from '../../lib/axios';
 import CardProject from '../Card/CardProject';
 import { Repos } from '@/@types/repos';
+import ProjectCardSkelleton from '../Card/CardProject/ProjectCardSkelleton';
 
 const Projects = () => {
   const [repos, setRepos] = useState<Repos[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     //Função para verificar se a screenshot do repositório já existe no imgur
@@ -36,6 +38,7 @@ const Projects = () => {
     };
     //Função para requisitar os repositórios do GitHub e adicionar as URLs das screenshots
     const getRepos = async () => {
+      setIsLoading(true);
       //Requisitando os repositórios do GitHub
       const { data: response } = await apiGitHub.get<Repos[]>(
         '/users/gabrielbrandaosales/repos',
@@ -63,6 +66,7 @@ const Projects = () => {
       );
 
       setRepos(filteredReposWithUrl as Repos[]);
+      setIsLoading(false);
     };
     getRepos();
   }, []);
@@ -78,9 +82,11 @@ const Projects = () => {
             Aqui estão algumas projetos desenvolvidos por mim.
           </p>
           <div className={style.feedProjects}>
-            {repos.map((repo) => (
-              <CardProject data={repo} key={repo.id} />
-            ))}
+            {isLoading
+              ? [...Array(4)].map((item, index) => (
+                  <ProjectCardSkelleton key={index} />
+                ))
+              : repos?.map((repo) => <CardProject data={repo} key={repo.id} />)}
           </div>
         </article>
       </div>
