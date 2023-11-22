@@ -46,3 +46,9 @@
   margin: 0 auto;
   gap: 24px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

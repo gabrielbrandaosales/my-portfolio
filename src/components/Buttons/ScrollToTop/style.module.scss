@@ -11,4 +11,7 @@
   &:hover {
     background: var(--c7);
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

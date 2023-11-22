@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className={scrollFixo ? style.scroll : style.header}>
       <span className={style.logo}>
-        <a href="#">Dev.</a>
+        <a href="#">{'<GB />'}</a>
       </span>
       <nav>
         <ul className={style.navButton}>

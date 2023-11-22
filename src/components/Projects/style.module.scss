@@ -58,3 +58,9 @@
 .cardGroup {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

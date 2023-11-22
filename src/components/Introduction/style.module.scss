@@ -105,3 +105,39 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 20px;
+  }
+
+  .intro {
+    order: 2;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+
+  .intro::before {
+    width: 30px;
+    height: 10px;
+    top: -10px;
+    left: 0px;
+  }
+
+  .iconWrapper {
+    margin-top: 20px;
+  }
+
+  #mask {
+    display: none;
+  }
+}

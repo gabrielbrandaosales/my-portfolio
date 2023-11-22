@@ -8,6 +8,7 @@ import Main from '@/components/Layout/Main';
 import ScrollToTopButton from '@/components/Buttons/ScrollToTop';
 import Education from '@/components/Education';
 import Projects from '@/components/Projects';
+import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 const fira = Fira_Sans({

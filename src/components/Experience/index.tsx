@@ -8,7 +8,7 @@ const Experiencia = () => {
       <span>
         <h1 className={style.title}>experiência</h1>
       </span>
-      <article>
+      <article className={style.article}>
         <p className={style.experience} aria-label="Experience description">
           Desenvolvo pequenos projetos como o Meu Portifólio utilizando{' '}
           <span className={style.bold}>HTML</span>,{' '}

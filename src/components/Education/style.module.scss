@@ -49,3 +49,9 @@
   flex-wrap: wrap;
   gap: 1rem 0;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

@@ -33,3 +33,31 @@
   color: var(--c13, #141414);
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 1.25rem;
+    .title {
+      color: #141414;
+      margin: 0 auto;
+      font-size: 3rem;
+      line-height: 72px;
+      max-width: 100%;
+      text-transform: capitalize;
+    }
+    .experience {
+      margin: 0 auto;
+      margin-right: 0;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+    .article {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
