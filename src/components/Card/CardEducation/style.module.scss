@@ -46,3 +46,34 @@
     top: 19px;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.25rem;
+  }
+  .title {
+    text-transform: capitalize;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 100%;
+  }
+  .experience {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-right: 0;
+  }
+  .cardGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .card {
+    margin-right: 0;
+  }
+}

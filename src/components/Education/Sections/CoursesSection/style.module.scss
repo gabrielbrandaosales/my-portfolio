@@ -44,3 +44,9 @@
   font-weight: 400;
   line-height: 1.25rem; /* 111.111% */
 }
+
+@media (max-width: 768px) {
+  .title {
+    margin-left: 30px;
+  }
+}

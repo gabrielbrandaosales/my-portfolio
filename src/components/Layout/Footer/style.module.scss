@@ -48,7 +48,22 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .content::after {
+    content: '';
+    display: none;
+  }
+  .footerText {
+    text-align: center;
+  }
+  .footerCopy {
+    text-align: center;
+  }
+  .iconWrapper {
     display: none;
   }
 }

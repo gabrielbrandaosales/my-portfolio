@@ -75,7 +75,9 @@ const Projects = () => {
     <section className={style.container} id="projects">
       <div className={style.content}>
         <span>
-          <h1 className={style.title}>Projetos</h1>
+          <h1 className={style.title}>Pro</h1>
+          <h1 className={style.title}>je</h1>
+          <h1 className={style.title}>tos</h1>
         </span>
         <article>
           <p className={style.subtitle}>
