@@ -64,6 +64,9 @@
     text-align: center;
   }
   .iconWrapper {
-    display: none;
+    flex-direction: row;
+    p {
+      display: none;
+    }
   }
 }
