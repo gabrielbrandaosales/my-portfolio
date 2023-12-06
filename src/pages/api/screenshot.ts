@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-const puppeteer = require('puppeteer');
+
 const axios = require('axios');
+const chrome = require('chrome-aws-lambda'); // add chrome-aws-lambda package
+const puppeteer = require('puppeteer-core'); // add puppeteer-core package
 
 export interface AccountImages {
   id: string;
@@ -68,6 +70,14 @@ export default async function handler(
   }
 
   if (req.method == 'POST') {
+    const options = {
+      args: [chrome.args, '--hide-scrollbars', '--disable-web-security'],
+      defaultViewport: chrome.defaultViewport,
+      executablePath: await chrome.executablePath,
+      headless: true,
+      ignoredHTTPSErrors: true,
+    };
+
     const { url, title } = req.query;
 
     if (!url) {
@@ -80,7 +90,7 @@ export default async function handler(
     let browser; // Abre uma nova instância do Chrome (ou Chromium)
 
     try {
-      browser = await puppeteer.launch({}); // add empty object to add types
+      browser = await puppeteer.launch(options); // add empty object to add types
       const page = await browser.newPage(); // add types
 
       await page.setViewport({ width: 1600, height: 1200 });

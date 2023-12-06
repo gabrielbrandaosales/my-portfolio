@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chrome-aws-lambda": "^6",
     "@next/font": "13.5.2",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
@@ -18,6 +19,7 @@
     "eslint-config-next": "13.5.2",
     "next": "13.5.2",
     "puppeteer": "^21.3.8",
+    "puppeteer-core": "^6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
