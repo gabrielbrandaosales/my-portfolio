@@ -1,4 +1,4 @@
-#### Copyright © 2020 / [Gabriel Brandão](https://github.com/gabrielbrandaosales)
+#### Copyright © 2024 / [Gabriel Brandão](https://github.com/gabrielbrandaosales)
 
 A permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste arquivo, sem restrição nos direitos de usar, copiar, modificar e mesclar.
 
