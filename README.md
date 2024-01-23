@@ -100,11 +100,17 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
   </tr>
-</table>
+</table> -->
+
+## 🧑 Author
+
+<img src='https://github.com/gabrielbrandaosales.png' alt='Foto do autor' width='100px'/>
+
+<sub>Gabriel Brandão</sub> 
 
 ## 😄 Seja um dos contribuidores
 
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir. -->
+Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir. 
 
 ## 📝 Licença
 
