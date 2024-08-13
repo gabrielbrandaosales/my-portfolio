@@ -15,11 +15,8 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Sessão de projetos
-- [x] Versão mobile
-- [x] API github com API imgur
-- [ ] Hospedar puppeteer no servidor
-- [ ] Otimização com SSG 
+- [ ] Scroll infinito
+- [ ] Loading
 
 ## 💻 Pré-requisitos
 
