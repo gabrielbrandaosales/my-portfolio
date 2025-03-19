@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import React from 'react';
 import style from './style.module.scss';
 import { SocialButton } from '../Buttons/SocialButton';
-import { GitHub, Instagram, Linkedin } from 'react-feather';
+import { GitHub, Instagram, Linkedin, Link2 } from 'react-feather';
 
 const Intro = () => {
   return (
@@ -37,6 +36,8 @@ const Intro = () => {
             target="_blank"
             icon={Instagram}
           />
+
+          <SocialButton href="/resume.pdf" download icon={Link2} />
         </div>
       </div>
     </section>
