@@ -18,7 +18,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Sessão de projetos
 - [x] Versão mobile
 - [x] API github com API imgur
-- [ ] Criar um botão para resume
+- [x] Criar um botão para resume
 - [ ] Hospedar puppeteer no servidor
 - [ ] Otimização com SSG 
 
