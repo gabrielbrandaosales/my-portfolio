@@ -56,8 +56,6 @@ yarn dev
 pnpm dev
 ```
 
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
 ## 📫 Contribuindo para my-portfolio
 
 Para contribuir com my-portfolio, siga estas etapas:
