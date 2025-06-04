@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import Image from 'next/image';
 import { SocialButton } from '@/components/Buttons/SocialButton';
-import { GitHub, Instagram, Linkedin, Mail } from 'react-feather';
+import { GitHub, Instagram, Linkedin, Mail, Hash } from 'react-feather';
 
 const Footer = () => {
   return (
@@ -41,6 +41,15 @@ const Footer = () => {
             icon={Mail}
             color="#FFF"
           />
+          <SocialButton
+            href="mailto:gabrielbrandaosales@hotmail.com"
+            target="_blank"
+            text="(13) 98179-5176"
+            icon={Hash}
+            color="#FFF"
+          />
+
+          
         </div>
         <p className={style.footerCopy}>
           Gabriel Brandão. Alguns direitos reservados.
