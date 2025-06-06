@@ -42,7 +42,7 @@ const Footer = () => {
             color="#FFF"
           />
           <SocialButton
-            href="https://wa.me/+5513981765179"
+            href="https://wa.me/+5513981795176"
             target="_blank"
             text="(13) 98179-5176"
             icon={Hash}
