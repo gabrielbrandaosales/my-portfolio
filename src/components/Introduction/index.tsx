@@ -17,7 +17,7 @@ const Intro = () => {
         /> */}
       </div>
       <div className={style.intro}>
-        <h1 className={style.position}>Desenvolvedor Full Stack</h1>
+        <h1 className={style.position}>Gabriel Brandão</h1>
         <div className={style.iconWrapper}>
           <SocialButton
             href="https://www.linkedin.com/in/gabrielbrandaosales/"
@@ -39,6 +39,7 @@ const Intro = () => {
 
           <SocialButton href="/resume.pdf" download icon={Link2} />
         </div>
+        <h2 style={{ fontSize: '2rem' }}>Web Fullstack Developer.</h2>
       </div>
     </section>
   );
