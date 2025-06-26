@@ -21,6 +21,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] API github com API imgur
 - [x] Criar um botão para resume
 - [x] Adicionar nome
+- [ ] Menu lateral (mobile)
 - [ ] Refinar layout mobile
 - [ ] Hospedar puppeteer no servidor
 - [ ] Otimização com SSG
