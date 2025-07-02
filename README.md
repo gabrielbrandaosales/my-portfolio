@@ -22,6 +22,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Criar um botão para resume
 - [x] Adicionar nome
 - [ ] Menu lateral (mobile)
+- [ ] Versão ingles
 - [ ] Refinar layout mobile
 - [ ] Hospedar puppeteer no servidor
 - [ ] Otimização com SSG
