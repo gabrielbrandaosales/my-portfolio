@@ -17,6 +17,13 @@ const Experiencia = () => {
           como a rede social Dogs eu trabalhei no UX e UI Design do projeto.
         </p>
         <CardExperience
+          title='Hard System Santos'
+          year='2025'
+          position='IT Technical Support'
+          description='Atendimento técnico a usuários, resolução de problemas em hardware, software e redes, garantindo estabilidade, segurança e continuidade dos sistemas.'
+          technologies={['Infra']}
+        />
+        <CardExperience
           title="GBM Tech & Control"
           year="2023"
           position="Developer Jr"
